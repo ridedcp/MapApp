@@ -13,6 +13,11 @@
 		3E0B0A7B2209909B005C6345 /* MapApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3E0B0A792209909B005C6345 /* MapApp.xcdatamodeld */; };
 		3E0B0A7D2209909D005C6345 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E0B0A7C2209909D005C6345 /* Assets.xcassets */; };
 		3E0B0A802209909D005C6345 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E0B0A7E2209909D005C6345 /* LaunchScreen.storyboard */; };
+		3E0B0A91220991D2005C6345 /* NSUserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0B0A90220991D2005C6345 /* NSUserDefaultsManager.swift */; };
+		3E0B0A93220991F9005C6345 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0B0A92220991F9005C6345 /* Reachability.swift */; };
+		3E0B0A9522099264005C6345 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0B0A9422099264005C6345 /* Extensions.swift */; };
+		3E0B0A98220992A0005C6345 /* Geolocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0B0A97220992A0005C6345 /* Geolocation.swift */; };
+		3E0B0A9A220992CF005C6345 /* GeolocationInverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0B0A99220992CF005C6345 /* GeolocationInverse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		3E0B0A7C2209909D005C6345 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E0B0A7F2209909D005C6345 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E0B0A812209909D005C6345 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E0B0A90220991D2005C6345 /* NSUserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSUserDefaultsManager.swift; sourceTree = "<group>"; };
+		3E0B0A92220991F9005C6345 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		3E0B0A9422099264005C6345 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3E0B0A97220992A0005C6345 /* Geolocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geolocation.swift; sourceTree = "<group>"; };
+		3E0B0A99220992CF005C6345 /* GeolocationInverse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationInverse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +67,99 @@
 			isa = PBXGroup;
 			children = (
 				3E0B0A722209909B005C6345 /* AppDelegate.swift */,
-				3E0B0A742209909B005C6345 /* ViewController.swift */,
-				3E0B0A762209909B005C6345 /* Main.storyboard */,
-				3E0B0A7C2209909D005C6345 /* Assets.xcassets */,
-				3E0B0A7E2209909D005C6345 /* LaunchScreen.storyboard */,
+				3E0B0A8F22099180005C6345 /* Stories */,
+				3E0B0A8E2209917D005C6345 /* Controllers */,
+				3E0B0A8D2209910C005C6345 /* Common */,
+				3E0B0A89220990FD005C6345 /* Models */,
+				3E0B0A88220990FA005C6345 /* Utils */,
+				3E0B0A87220990F6005C6345 /* Resources */,
 				3E0B0A812209909D005C6345 /* Info.plist */,
 				3E0B0A792209909B005C6345 /* MapApp.xcdatamodeld */,
 			);
 			path = MapApp;
+			sourceTree = "<group>";
+		};
+		3E0B0A87220990F6005C6345 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3E0B0A7C2209909D005C6345 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3E0B0A88220990FA005C6345 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3E0B0A9422099264005C6345 /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3E0B0A89220990FD005C6345 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3E0B0A8A22099101005C6345 /* HttpManager */ = {
+			isa = PBXGroup;
+			children = (
+				3E0B0A92220991F9005C6345 /* Reachability.swift */,
+			);
+			path = HttpManager;
+			sourceTree = "<group>";
+		};
+		3E0B0A8B22099104005C6345 /* DefaultsManager */ = {
+			isa = PBXGroup;
+			children = (
+				3E0B0A90220991D2005C6345 /* NSUserDefaultsManager.swift */,
+			);
+			path = DefaultsManager;
+			sourceTree = "<group>";
+		};
+		3E0B0A8C22099107005C6345 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				3E0B0A9622099286005C6345 /* LocationManager */,
+				3E0B0A8B22099104005C6345 /* DefaultsManager */,
+				3E0B0A8A22099101005C6345 /* HttpManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		3E0B0A8D2209910C005C6345 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3E0B0A8C22099107005C6345 /* Managers */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3E0B0A8E2209917D005C6345 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3E0B0A742209909B005C6345 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3E0B0A8F22099180005C6345 /* Stories */ = {
+			isa = PBXGroup;
+			children = (
+				3E0B0A762209909B005C6345 /* Main.storyboard */,
+				3E0B0A7E2209909D005C6345 /* LaunchScreen.storyboard */,
+			);
+			path = Stories;
+			sourceTree = "<group>";
+		};
+		3E0B0A9622099286005C6345 /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				3E0B0A97220992A0005C6345 /* Geolocation.swift */,
+				3E0B0A99220992CF005C6345 /* GeolocationInverse.swift */,
+			);
+			path = LocationManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +234,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E0B0A7B2209909B005C6345 /* MapApp.xcdatamodeld in Sources */,
+				3E0B0A9522099264005C6345 /* Extensions.swift in Sources */,
+				3E0B0A98220992A0005C6345 /* Geolocation.swift in Sources */,
+				3E0B0A9A220992CF005C6345 /* GeolocationInverse.swift in Sources */,
+				3E0B0A91220991D2005C6345 /* NSUserDefaultsManager.swift in Sources */,
 				3E0B0A752209909B005C6345 /* ViewController.swift in Sources */,
+				3E0B0A93220991F9005C6345 /* Reachability.swift in Sources */,
 				3E0B0A732209909B005C6345 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
